@@ -1,46 +1,46 @@
-.repository{
-    &__card{
-            background: #1a1a1a;
-            border-radius: 5px;
-            color: #fff;
-            height: 80px;
-            padding: 0 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
+.repository {
+    &__card {
+        background: #1a1a1a;
+        border-radius: 5px;
+        color: #fff;
+        height: 80px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
     }
-    &__name{
+    &__name {
         font-weight: 600;
         font-size: 20px;
         cursor: pointer;
-        transition: .1s;
-        &:hover{
+        transition: 0.1s;
+        &:hover {
             color: rgba(255, 255, 255, 0.774);
         }
     }
-    &__data{
+    &__data {
         width: 500px;
         display: flex;
         justify-content: space-between;
     }
-    &__url{
+    &__url {
         border-bottom: 2px dotted rgba(255, 255, 255, 0.6);
-        transition: .1s;
-        &:hover{
+        transition: 0.1s;
+        &:hover {
             color: rgba(255, 255, 255, 0.774);
         }
     }
 }
 
-.stars{
-    &-box{
+.stars {
+    &-box {
         display: flex;
         gap: 5px;
         width: 100px;
         align-items: center;
         justify-content: flex-start;
-        & > img{
+        & > img {
             width: 20px;
             height: 20px;
         }

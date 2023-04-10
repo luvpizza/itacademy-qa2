@@ -16,7 +16,7 @@ const RepositoriesPage = () => {
         setTotalPages] = useState([])
     const [currentPage,
         setCurrentPage] = useState(localStorage.getItem("GitDefaultPage") || 1);
-    const debouncedQuery = useDebounce(searchQuery, 300)
+    const debouncedQuery = useDebounce(searchQuery, 500)
 
     const getAllRepos = async() => {
         const resp = await fetch(`https://api.github.com/search/repositories?q=stars:%3E1&sort=stars&order=desc&per_page=10&page=${currentPage}`, {})
@@ -51,7 +51,7 @@ const RepositoriesPage = () => {
             localStorage.setItem("GitSearchQ", searchQuery);
             localStorage.setItem("GitIsSearched", true);
             setCurrentRepos([])
-            searchRepos(searchQuery).then(res => setCurrentRepos(res.items))
+            searchRepos(debouncedQuery).then(res => setCurrentRepos(res.items))
         } else {
             setCurrentRepos([])
             setIsSearched(false)
