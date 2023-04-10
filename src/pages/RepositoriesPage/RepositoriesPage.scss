@@ -1,0 +1,41 @@
+.search-bar{
+    margin-top: 60px;
+}
+.repository-box{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 0;
+}
+
+.all-page-selector{
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ececec5b;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.page-selector__btn{
+    cursor: pointer;
+    
+    background: #e5e5e5;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: .15s;
+    &:hover{
+        color: #fff;
+        background: rgb(62, 145, 201);
+        
+    }
+    &_active{
+        color: #fff;
+        background: rgb(62, 145, 201);
+    }
+}
