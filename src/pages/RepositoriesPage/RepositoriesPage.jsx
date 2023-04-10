@@ -53,7 +53,6 @@ const RepositoriesPage = () => {
             setCurrentRepos([])
             searchRepos(searchQuery).then(res => setCurrentRepos(res.items))
         } else {
-            setCurrentPage(1)
             setCurrentRepos([])
             setIsSearched(false)
             getAllRepos().then(res => setCurrentRepos(res.items))
